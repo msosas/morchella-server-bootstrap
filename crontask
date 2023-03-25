@@ -1,0 +1,4 @@
+PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"
+APP_NAME="morchella"
+@reboot         root    sleep 60 && python3 -m pip install virtualenv && /usr/local/bin/virtualenv /opt/$APP_NAME/.venv && /opt/$APP_NAME/.venv/bin/pip install -r /opt/$APP_NAME/requirements.txt  && /opt/$APP_NAME/.venv/bin/python /opt/$APP_NAME/main.py 2>&1 | logger -t $APP_NAME
+0 */3 * * *     root    /opt/$APP_NAME/.venv/bin/python /opt/$APP_NAME/spore.py 2>&1 | logger -t $APP_NAME

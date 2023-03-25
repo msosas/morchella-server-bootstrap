@@ -1,0 +1,6 @@
+boto3==1.26.34
+loguru==0.6.0
+py-dmidecode==0.1.0
+requests==2.28.2
+pytz==2022.7.1
+PyYAML==6.0
