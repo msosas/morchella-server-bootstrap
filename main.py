@@ -80,7 +80,7 @@ def main():
         aws_region_name = aws_credentials['AWS_REGION']
     else:
         aws_region_name = f'{get_closest_aws_region(latitude, longitude)}'
-    morchella_config = config.get_section('morchella')
+    morchella_config = config.get_section('MORCHELLA')
     node_auto_register = morchella_config['AUTO_REGISTER'] if morchella_config['AUTO_REGISTER'] == '-y' else ''
     slack_web_hook = config.get_section('SLACK')['SLACK_WEB_HOOK']
     slack_channel = config.get_section('SLACK')['SLACK_CHANNEL']
